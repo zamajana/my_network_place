@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/templateNOVO.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content = "Ja sam Maja Dumitraskovic, volim da se bavim web designom (html, css, java script, php..), photoshopom, illustratorom i fotografisanjem (sebe i drugih :) ). Ovo je moj portfolio!" /> 
+<meta name="keywords" content="Maja, Dumitraskovic, Maja Dumitraskovic, photoshop, html, php, java script, css, adobe, illustrator, photos " /> 
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>welcome to my network place!</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link rel="icon" href="favicon.jpg"/>
+
+<link id="css_switch" href="style.css" type="text/css" rel="stylesheet">
+<script>
+var browser = window.navigator.appName;
+var verzija = window.navigator.appVersion;
+if(browser.indexOf("Explorer") != -1) //ako je browser explorer...
+ {
+ 	if(verzija.indexOf("6") != -1) // i to verzija 6
+  	{
+  		document.getElementById('css_switch').href = 'style2.css'; //menja se css fajl
+  	}
+  	else // za verziju 7 npr
+	{
+		document.getElementById('css_switch').href = 'style3.css';
+	}
+ }
+
+</script>
+   
+<link rel="icon" href="favicon.jpg"/>
+
+</head>
+
+<body>
+ 	<div id="karirano"></div>
+	<div id="header">
+    	<p id="ps_link"><a href="myworks.html#ps">photoshop</a></p>
+    	<p id="html_link"><a href="myworks.html#css">&#60;html&#62;</a></p>
+    	<p id="css_link"><a href="myworks.html#css">&#46;css</a></p>     
+        <p id="ai_link"><a href="myworks.html#ai">illustrator</a></p>
+        <p id="php_link"><a href="myworks.html#php">&#60;&#63;php</a></p>
+        <p id="joomla_link"><a href="myworks.html#joomla">joomla</a></p>
+        <p id="photos_link"><a href="myworks.html#photos">photos</a></p>
+    </div>
+    <div id="content">
+    	<div id="top">
+        	<div id="top_menu">
+            	<ul id="menu_lista">
+                	<li><a href="index.html">@ home</a></li>
+                    <li><a href="myworks.html">@ my works</a></li>
+                    <li><a href="guestbook.html">@ guest book</a></li>
+                    <li><a href="contact.html">@ contact</a></li>
+                </ul>
+            </div>
+            <div id="welcome_note">Hello, my name is Maja and this is my portfolio.<br/>
+            						You might enjoy some stuff I did, so feel free to check it out! <br/> Feel at home! :)            						        	</div>
+        </div>
+        
+        <div id="main">
+        	<!-- InstanceBeginEditable name="EditRegion3" -->
+			<div id="opis">
+            	<h1>od Javascript funkcionalnosti na sajtu je zastupljeno sledece: (1/2)</h1>
+            	<ul>
+                	<li>Zbog komplikovanog layouta, pri ucitavanju svake strane javascript proverava koji browser koristite i u zavisnosti od toga menja link do eksternog css fajla sa stilovima, tako da: 
+                        <ul style="margin-left: 20px;">
+                            <li>ukoliko koristite Internet Explorer 6, ucitava se style2.css</li>
+                            <li>a ukoliko kositite Internet Explorer 7, ucitava se style3.css</li>
+                            <li>ukoliko koristite neki drugi browser (Google Chrome ili Firefox), nista se ne desava, layout je dobar</li>
+                            <li>drugi browseri nisu provereni</li>
+                        </ul>
+                    </li>
+                    
+                	<li>Ako prvi put pristupate index stranici, u zavisnosti od browsera moze vam se pojaviti obavestenje ili ne
+                        <ul style="margin-left: 20px;">
+                        	<li>Ako koristite Internet Explorer 6, dobicete obavestenje da sajt nije prilagodjen tom browseru i prompt prozor koji vas pita da li zelite da nastavite.<br/>
+                             Ako zelite da nastavite, ipak ce vam predloziti da pokusate drugi browser, ako ne zelite da nastavite, prozor se zatvara.<br /></li>
+                             <li><i>Ovo je zato sto i posle promene css fajla, u Internet Exploreru 6 sajt ne izgleda kako treba.</i></li>
+                             <li><i>(Window, Document, String)</i></li>
+                        </ul>
+     
+                    </li>
+					<li>Na pocetnoj strani takodje postoji i <b>brojac poseta</b> koji sluzi da se ova obavestenja ne bi pojavljivala svaki put kad se vratite na index stranu. <br />
+                    Takodje, javascript proverava da li koristite Chrome (u njemu ne radi), i ako ne, prikazuje se broj poseta. <i>(Date, Document)</i>
+                    </li>
+                    <li>Na index strani, kad se predje misem preko <b>log in</b> dugmeta ispod forme, pojavljuje se <b>tooltip</b> koji vas obavestava da forma ne radi, jer nije obradjena.</li>			           			<li>Ispod ovoga, prikazuje se i vreme kad ste pristupili stranici. <i>(Date)</i></li>
+                	
+                </ul>
+            
+            <p style="position:relative; float:right; margin-top: 30px; font-weight:bold;"><a href="opis2.html">NEXT >></a></p>
+            </div>
+            
+			
+			<!-- InstanceEndEditable -->
+        </div>
+        <div id="footer">
+        	<ul id="bottom_menu">
+            		<li><a href="index.html">home</a></li>
+                    <li><a href="myworks.html">my works</a></li>
+                    <li><a href="guestbook.html">guest book</a></li>
+                    <li class="last"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="tepih"></div>
+
+
+</body>
+<!-- InstanceEnd --></html>

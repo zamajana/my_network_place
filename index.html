@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/templateNOVO.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content = "Ja sam Maja Dumitraskovic, volim da se bavim web designom (html, css, java script, php..), photoshopom, illustratorom i fotografisanjem (sebe i drugih :) ). Ovo je moj portfolio!" /> 
+<meta name="keywords" content="Maja, Dumitraskovic, Maja Dumitraskovic, photoshop, html, php, java script, css, adobe, illustrator, photos " /> 
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>welcome to my network place!</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+
+    <script type="text/javascript" src="js/vreme.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script language = "JavaScript">
+	//brojac poseta // da ne bi stalno iskakalo upozorenje kad se korisnik vrati na istu stranu
+    			var novikuki = document.cookie;
+				var delovikukija = novikuki.split("=");
+				var imekukija = delovikukija[0];
+				var vrednostkukija = unescape(delovikukija[1]);
+				var prethodnavrednost = vrednostkukija;
+					
+				if (imekukija != "brojac" || vrednostkukija == null) 
+				{
+					prethodnavrednost = 0;
+				}
+					
+				var novavrednost = parseInt(prethodnavrednost) + 1;
+				var newDate = new Date();
+				newDate.setTime(newDate.getTime() + 2592000000);
+				document.cookie = " brojac=" + novavrednost + ";expires=" + newDate.toGMTString();
+
+  		//provera browsera	
+				var browser = window.navigator.appName;
+				var verzija = window.navigator.appVersion;	
+				
+				if(novavrednost <= 1) 
+				//ako ste vec jednom posetili stranu, obavestenje se nece opet pojaviti
+				{
+		
+					if(browser.indexOf("Explorer") != -1) // ako je browser explorer...
+					{
+						//... i to verzija 6 
+						if(verzija.indexOf("6") != -1)
+						{
+							var pomocna = confirm("You are using " + browser + " " + verzija + "\n\nThis site is not adopted to this browser. Some things will not work properly! \nDo you want to continue?");
+							if (pomocna == true)	
+								alert("OK. But you could try another browser..");
+							else{
+								alert("Goobye!");
+								window.close();
+							}
+						}
+					}
+					//ako nije explorer ni chrome, nego npr firefox
+					else if(verzija.indexOf("Chrome") == -1)
+					{
+						alert("You are using " + browser + " " + verzija + "\n\nThis site should work properly!"); //ovo inace vazi i za chrome, ali u njemu ne radi brojac poseta, pa ce stalno pojavljivati ovo obavestenje kad se vracamo na istu stranu
+					}	
+					
+				}	  
+    
+    
+    </script>
+<!-- InstanceEndEditable -->
+<link rel="icon" href="favicon.jpg"/>
+
+<link id="css_switch" href="style.css" type="text/css" rel="stylesheet">
+<script>
+var browser = window.navigator.appName;
+var verzija = window.navigator.appVersion;
+if(browser.indexOf("Explorer") != -1) //ako je browser explorer...
+ {
+ 	if(verzija.indexOf("6") != -1) // i to verzija 6
+  	{
+  		document.getElementById('css_switch').href = 'style2.css'; //menja se css fajl
+  	}
+  	else // za verziju 7 npr
+	{
+		document.getElementById('css_switch').href = 'style3.css';
+	}
+ }
+
+</script>
+   
+<link rel="icon" href="favicon.jpg"/>
+
+</head>
+
+<body>
+ 	<div id="karirano"></div>
+	<div id="header">
+    	<p id="ps_link"><a href="myworks.html#ps">photoshop</a></p>
+    	<p id="html_link"><a href="myworks.html#css">&#60;html&#62;</a></p>
+    	<p id="css_link"><a href="myworks.html#css">&#46;css</a></p>     
+        <p id="ai_link"><a href="myworks.html#ai">illustrator</a></p>
+        <p id="php_link"><a href="myworks.html#php">&#60;&#63;php</a></p>
+        <p id="joomla_link"><a href="myworks.html#joomla">joomla</a></p>
+        <p id="photos_link"><a href="myworks.html#photos">photos</a></p>
+    </div>
+    <div id="content">
+    	<div id="top">
+        	<div id="top_menu">
+            	<ul id="menu_lista">
+                	<li><a href="index.html">@ home</a></li>
+                    <li><a href="myworks.html">@ my works</a></li>
+                    <li><a href="guestbook.html">@ guest book</a></li>
+                    <li><a href="contact.html">@ contact</a></li>
+                </ul>
+            </div>
+            <div id="welcome_note">Hello, my name is Maja and this is my portfolio.<br/>
+            						You might enjoy some stuff I did, so feel free to check it out! <br/> Feel at home! :)            						        	</div>
+        </div>
+        
+        <div id="main">
+        	<!-- InstanceBeginEditable name="EditRegion3" -->
+
+
+<div id="left">
+        	<div class="box">
+                <img src="images/guestbook.png" alt="guest book" style="padding:5px; padding-left:20px;"/>
+              <form action="index.html" method="post" style="padding:5px; padding-left: 10px;" >
+                <p>Username:</p>
+                <input name="username" type="text"/>
+                <p>Password:</p>
+                <input name="pass" type="password" />
+                <input name="log in" type="submit" value="log in" onmouseover="showTip(event)" onMouseOut="hideTip(event)"/>
+                <div id="napomena">
+                    <font size="-1"><span style="font-weight: bold">note:</span><br/>
+                    This log in form doesn't work. :( PHP needed.</font>
+                </div>
+              </form>
+                <p style="padding:5px; padding-left: 10px; ">
+                <font size="-1">if you don't have an account, please</font>
+                <br /><a href="guestbook.html">sign up!</a></p>
+               
+            </div>
+            <div class="box">
+            	<div style="padding-top: 5px; padding-left: 40px; ">
+               	  <font size="+2"><b><script>prikaziVreme();</script></b></font>
+              </div>
+            	<p style="padding:0px; padding-left: 10px;">It's about time to <a href="contact.html">contact me!</a></p>
+                <div id="coffee">
+                	<a href="http://twitter.com/#!/zamajana"><img id="twit" src="images/twit.png" title="follow me on twitter"/></a>
+                	<a href="http://www.facebook.com/majadumitraskovic"><img id="fb" src="images/fb.png" title="add me on facebook"/></a>
+                </div>
+          </div>
+        </div>
+
+		<div id="right">  
+        		<a href="opis.html" style="margin-left: 110px;">[ opis javascript funkcionalnosti ]</a>   
+                <a href="myworks.html"><img src="images/home_img.jpg" /></a>
+                <p>
+	<script language = "JavaScript">
+				//brojac naredbi ne radi u chrome-u, zato ako nije chrome, ispisuje: 
+				if(verzija.indexOf("Chrome") == -1){
+                        document.write("Ovu stranicu ste posetili " + novavrednost + " puta.");
+					}
+        </script>
+                </p>
+		</div>
+        
+			
+			<!-- InstanceEndEditable -->
+        </div>
+        <div id="footer">
+        	<ul id="bottom_menu">
+            		<li><a href="index.html">home</a></li>
+                    <li><a href="myworks.html">my works</a></li>
+                    <li><a href="guestbook.html">guest book</a></li>
+                    <li class="last"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="tepih"></div>
+
+
+</body>
+<!-- InstanceEnd --></html>

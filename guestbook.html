@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content = "Ja sam Maja Dumitraskovic, volim da se bavim web designom (html, css, java script, php..), photoshopom, illustratorom i fotografisanjem (sebe i drugih :) ). Ovo je moj portfolio!" /> 
+<meta name="keywords" content="Maja, Dumitraskovic, Maja Dumitraskovic, photoshop, html, php, java script, css, adobe, illustrator, photos " /> 
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>welcome to my network place!</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+
+<script type="text/javascript" src="js/validacija.js"></script>
+
+<script language="JavaScript">
+var browser = window.navigator.appName;
+var verzija = window.navigator.appVersion;
+if(browser.indexOf("Explorer") != -1) //ako je browser explorer...
+ {
+ 	if(verzija.indexOf("6") != -1) // i to verzija 6
+  	{
+  		document.getElementById('css_switch').href = 'style2.css'; //menja se css fajl
+  	}
+  	else // za verziju 7 npr
+	{
+		document.getElementById('css_switch').href = 'style3.css';
+	}
+ }
+		
+function napraviKuki(forma)
+	{
+	//provera browsera zbog cookia	
+		var browser = window.navigator.appName;
+		var verzija = window.navigator.appVersion;
+	
+		if(verzija.indexOf("Chrome") == -1)
+		{
+			Kuki(forma);
+			alert("Cookie has been baked!");
+		}
+		else{
+			var pomocna = confirm("You are using " + browser + " " + verzija + "\n\nThis page is about to bake some cookies. In this browser it can't! \nDo you want to continue?");
+			if (pomocna == true){	
+				alert("OK. But you could try another browser..");
+				Kuki(forma);
+			}
+			else{
+				alert("Goobye!");
+				window.close();
+			}
+	
+		}
+	}		
+
+function Kuki(forma){
+  
+   var kada = new Date();
+   kada.setMinutes(kada.getMinutes() + 10); 
+   imeGosta = forma.username.value;
+   document.cookie = "ime=" + escape(imeGosta)+";expires=" + kada.toGMTString();
+
+}
+
+function dobrodosli(){
+   var pozicija = document.cookie.indexOf("ime=");
+   if ( pozicija != -1){
+// ako je nasao podstring (-1 je vrednost ako nije nasao podstring)
+   var pocetak = pozicija + 4;
+   var kraj = document.cookie.indexOf(";",pocetak); 
+//ako je ubacen neki od atributa kukija, odvojen je sa ; pa ce kraj naci poziciju od ;
+   if(kraj == -1){ kraj = document.cookie.length;} 
+// -1 znaci da nije nadjen ; onda pretpostavlja da je duzina do kraja kukija
+    gost = unescape(document.cookie.substring(pocetak,kraj));
+	var pozdrav = "Welcome " + gost.toUpperCase() + "! <br/>Thank you for signing up!";
+    
+	mojProzor = window.open('','','width=300,height=200')
+    mojProzor.document.write(pozdrav);
+	
+   } else { alert("There's no cookies today! :)");}
+}
+
+	
+</script>
+
+<!-- TemplateEndEditable -->
+
+<link rel="icon" href="favicon.jpg"/> 
+
+<link id="css_switch" href="style.css" type="text/css" rel="stylesheet">
+
+
+</head>
+
+<body onload="proveraBrowsera()">
+ 	<div id="karirano"></div>
+	<div id="header">
+    	<p id="ps_link"><a href="myworks.html#ps">photoshop</a></p>
+    	<p id="html_link"><a href="myworks.html#css">&#60;html&#62;</a></p>
+    	<p id="css_link"><a href="myworks.html#css">&#46;css</a></p>     
+        <p id="ai_link"><a href="myworks.html#ai">illustrator</a></p>
+        <p id="php_link"><a href="myworks.html#php">&#60;&#63;php</a></p>
+        <p id="joomla_link"><a href="myworks.html#joomla">joomla</a></p>
+        <p id="photos_link"><a href="myworks.html#photos">photos</a></p>
+    </div>
+    <div id="content">
+    	<div id="top">
+        	<div id="top_menu">
+            	<ul id="menu_lista">
+                	<li><a href="index.html">@ home</a></li>
+                    <li><a href="myworks.html">@ my works</a></li>
+                    <li><a href="guestbook.html">@ guest book</a></li>
+                    <li><a href="contact.html">@ contact</a></li>
+                </ul>
+            </div>
+            <div id="welcome_note">Hello, my name is Maja and this is my portfolio.<br/>
+            						You might enjoy some stuff I did, so feel free to check it out! <br/> Feel at home! :)            					</div>
+        </div>
+        <div id="main">
+        <div id="guest_book">
+  <form action="welcome.html" >  
+    <table width="500">
+  <tr>
+    <td class="obojeno" colspan="2"><p align="center"><b>Sign up and leave a comment in my guest book</b></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"> <p><b>* Gender:</b></p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="radio" name="gender" value="female">
+    </div></td>
+    <td><p>Female</p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="radio" name="gender" value="male">
+    </div></td>
+    <td> <p>Male</p></td>
+  </tr>
+  <tr>
+    <td><p><b>* Username:</b> </p></td>
+    <td><input type="text" name="username"></td>
+  </tr>
+  <tr>
+    <td><p><b>* Password:</b> </p></td>
+    <td><input type="password" name="pass"></td>
+  </tr>
+  <tr>
+    <td><p><b>* E-mail:</b></p></td>
+    <td><input type="text" name="mail" size="35"></td>
+  </tr>
+  <tr>
+  	<td></td>
+    <td><input name="remember" type="button" value="Remember me!" onClick="napraviKuki(this.form)"/> <input name="welcome" type="button" value="Welcome me!" onClick="dobrodosli()"/></td>
+  </tr>
+  <tr>
+    <td class="obojeno" colspan="2"> <p align="center"><b>Select your interests and let me to know you a little better:</b></p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="checkbox" name="interest" value="" />  
+    </div></td>
+    <td><p>Graphic design</p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="checkbox" name="interest" value="" />
+    </div></td>
+    <td> <p>Web design (photoshop, illustrator..)</p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="checkbox" name="interest" value="" />
+    </div></td>
+    <td><p>Web development (html, css, java script, php...)</p></td>
+  </tr>
+  <tr>
+    <td><div align="right">
+      <input type="checkbox" name="interest" value="" />
+    </div></td>
+    <td><p>Photography</p> </td>
+  </tr>
+   <tr>
+    <td class="obojeno" colspan="2"><p align="center"><b>Comment:</b></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <textarea name="comment" rows="10" cols="30">        
+            </textarea>
+    </div></td>
+  </tr>
+    <tr>
+    <td class="obojeno" colspan="2">  <div align="center">
+      <input name="sign_up" type="submit" value="Sign up!" onclick="return validacija();" />
+      <input name="reset" type="reset" value="Reset" > 
+    </div></td>
+  </tr>
+  <tr><td colspan="2"><p align="right">fields marked with (*) are required!</p></td></tr>
+</table>
+</form>
+
+        </div>
+        </div>
+        
+        
+        <div id="footer">
+        	<ul id="bottom_menu">
+            		<li><a href="index.html">home</a></li>
+                    <li><a href="myworks.html">my works</a></li>
+                    <li><a href="guestbook.html">guest book</a></li>
+                    <li class="last"><a href="contact.html">contact</a></li>
+            </ul>
+        </div>
+    </div>
+<div id="tepih"></div>
+
+
+</body>
+</html>
+
